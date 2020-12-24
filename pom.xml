@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.4.1</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.cn.netty</groupId>
+    <artifactId>netty</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>netty</name>
+    <description>基于自定义协议，使用Netty构建物联网通信平台</description>
+
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <dependencies>
+              <dependency>
+                  <groupId>org.springframework.boot</groupId>
+                 <artifactId>spring-boot-starter</artifactId>
+             </dependency>
+
+             <!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
+              <dependency>
+                  <groupId>io.netty</groupId>
+                 <artifactId>netty-all</artifactId>
+                </dependency>
+             <dependency>
+                    <groupId>org.springframework.boot</groupId>
+                   <artifactId>spring-boot-configuration-processor</artifactId>
+                 <optional>true</optional>
+              </dependency>
+
+         <!-- web项目必要的依赖 -->
+         <dependency>
+               <groupId>org.springframework.boot</groupId>
+              <artifactId>spring-boot-starter-web</artifactId>
+           </dependency>
+
+           <!-- 热启动devtools -->
+           <dependency>
+               <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-devtools</artifactId>
+             <optional>true</optional>
+             <scope>true</scope>
+         </dependency>
+
+               <dependency>
+                   <groupId>org.springframework.boot</groupId>
+                  <artifactId>spring-boot-starter-test</artifactId>
+                   <scope>test</scope>
+                </dependency>
+           </dependencies>
+
+       <build>
+           <plugins>
+               <plugin>
+                   <groupId>org.springframework.boot</groupId>
+                   <artifactId>spring-boot-maven-plugin</artifactId>
+                   <configuration>
+                       <fork>true</fork>
+                   </configuration>
+               </plugin>
+           </plugins>
+      </build>
+
+    </project>
